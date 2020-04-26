@@ -1,4 +1,4 @@
-module github.com/ivaninkv/hw01_hello_now
+module github.com/ivaninkv/GolangHomeWork/hw01_hello_now
 
 go 1.14
 
