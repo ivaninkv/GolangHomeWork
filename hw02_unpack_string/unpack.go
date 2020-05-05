@@ -2,7 +2,6 @@ package hw02_unpack_string //nolint:golint,stylecheck
 
 import (
 	"errors"
-	"fmt"
 	"strconv"
 	"strings"
 	"unicode"
@@ -10,14 +9,14 @@ import (
 
 var ErrInvalidString = errors.New("invalid string")
 
-func Unpack(input_str string) (str string, err error) {
+func Unpack(inputStr string) (str string, err error) {
 	var sb strings.Builder
 
-	if input_str == "" {
+	if inputStr == "" {
 		str = ""
 	} else {
 		var prev, curr rune
-		for _, s := range input_str {
+		for _, s := range inputStr {
 			prev = curr
 			curr = s
 
@@ -40,7 +39,7 @@ func Unpack(input_str string) (str string, err error) {
 	return
 }
 
-func main() {
-	s, e := Unpack("aaa10b")
-	fmt.Printf("%s %s", s, e)
-}
+// func main() {
+// 	s, e := Unpack("aaa10b")
+// 	fmt.Printf("%s %s", s, e)
+// }
