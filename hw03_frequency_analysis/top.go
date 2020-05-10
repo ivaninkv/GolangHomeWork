@@ -23,7 +23,7 @@ func Top10(inpText string) (result []string) {
 		dictMutex.Unlock()
 	}
 
-	var wd []wordDict
+	wd := make([]wordDict, 0)
 	for k, v := range freqDict {
 		wd = append(wd, wordDict{k, v})
 	}
@@ -45,5 +45,6 @@ func Top10(inpText string) (result []string) {
 
 // func main() {
 // 	text1 := "раз три два три два три"
+
 // 	fmt.Println(Top10(text1))
 // }
